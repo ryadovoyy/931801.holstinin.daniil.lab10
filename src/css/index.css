@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+body {
+  margin: 0;
+  min-width: 1200px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  height: 100vh;
+  background-image: url(../img/curtain.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-color: black;
+  transition: 0.2s;
+}
+
+.objects {
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: none;
+  max-width: 60%;
+  height: 100%;
+}
+
+.lamp {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 280px;
+}
+
+.cord {
+  position: absolute;
+  top: 113px;
+  left: 118px;
+  width: 10px;
+  height: 10px;
+  content: '';
+  transition: 0.1s;
+}
+
+.cord-parts {
+  position: relative;
+  height: 100%;
+}
+
+.line-before {
+  position: absolute;
+  top: 0;
+  right: 1px;
+  width: 4px;
+  height: 10px;
+  background-color: black;
+  transition: 0.2s;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 1px;
+  height: 10px;
+  background-color: rgb(59, 59, 59);
+  transition: 0.2s;
+}
+
+.line-after {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  width: 4px;
+  height: 10px;
+  background-color: black;
+  transition: 0.2s;
+}
+
+.circle {
+  position: absolute;
+  top: 123px;
+  left: 120px;
+  width: 6px;
+  height: 6px;
+  content: '';
+  border-radius: 50%;
+  background-color: rgb(232, 197, 93);
+  transition: 0.1s;
+}
+
+.light {
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  left: -268px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 410px 825px 410px;
+  border-color: transparent transparent yellow transparent;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.mock {
+  position: absolute;
+  top: 5px;
+  left: 127px;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+}
+
+.focus {
+  position: relative;
+  margin: 250px auto 0;
+  display: flex;
+  align-items: flex-start;
+  width: 650px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.witch {
+  flex-shrink: 0;
+  width: 400px;
+  min-width: 400px;
+}
+
+.hat {
+  z-index: 1;
+  margin-top: 60px;
+  flex-shrink: 0;
+  transform: rotate(180deg);
+  width: 200px;
+  min-width: 200px;
+}
+
+.animal {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  left: 465px;
+  width: 70px;
+  min-width: 70px;
+  transition: 0.5s;
+}
